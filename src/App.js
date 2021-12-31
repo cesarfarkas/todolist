@@ -1,8 +1,8 @@
-import './App.css';
+import React from 'react'
 
 function App() {
   return (
-    <h1>TESTE</h1>
+    <h1>Todo List</h1>
   );
 }
 
