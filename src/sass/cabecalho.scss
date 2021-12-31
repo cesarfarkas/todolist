@@ -1,0 +1,15 @@
+@import './cores_padroes.scss';
+
+.cabecalho h1{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Pushster', cursive;
+    color: $rgb-branco;
+    padding: 0;
+    line-height: 0;
+}
+
+.cabecalho hr{
+    width: 50%;
+    border: 3px $rgb-verde solid;
+}

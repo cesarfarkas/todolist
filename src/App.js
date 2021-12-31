@@ -1,8 +1,15 @@
 import React from 'react'
+import Cabecalho from './Cabecalho.js'
+import InputList from './InpuList.js'
+import List from './List.js'
 
 function App() {
   return (
-    <h1>Todo List</h1>
+    <div class="container">
+      <Cabecalho />
+      <InputList />
+      <List />
+    </div>
   );
 }
 

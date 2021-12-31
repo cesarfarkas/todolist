@@ -1,0 +1,24 @@
+@import './cores_padroes.scss';
+
+.input-list{
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    margin-bottom: 30px;
+}
+
+.input-list input, .input-list button{
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+    height: 30px;
+    text-align: center;
+}
+
+.input-list button{
+    background-color: $rgb-verde;
+    color: $rgb-branco;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}

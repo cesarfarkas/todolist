@@ -1,0 +1,13 @@
+@import './cores_padroes';
+
+.lista-tarefas{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefa{
+    background-color: $rgb-azul;
+    padding: 15px;
+    border-radius: 5px;
+    color: $rgb-branco;
+}
