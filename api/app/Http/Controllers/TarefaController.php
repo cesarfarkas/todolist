@@ -38,14 +38,23 @@ class TarefaController extends Controller
      */
     public function store(Request $request)
     {
+        
         $tarefa = new Tarefa;
         $tarefa->titulo = $request->input('titulo');
         $tarefa->data_inclusao = $request->input('data_inclusao');
         $tarefa->data_conclusao = $request->input('data_conclusao');
 
-        if( $tarefa->save() ){
-            return new TarefaResource( $tarefa );
-        }
+        
+        // $verificaTarefa = Tarefa::findOrFail( $tarefa->titulo );
+
+        // if(empty($verificaTarefa)){
+            if( $tarefa->save() ){
+                return new TarefaResource( $tarefa );
+            }
+        // }else{
+        //     $tarefaRes = new TarefaResource($tarefa);
+        //     return $tarefaRes->Erros("Já existe uma tarefa com esse título. Defina uma outra.");
+        // }
     }
 
     /**
