@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import axios from 'axios'
 import './estilos/inputlist.css'
 
 class InputList extends React.Component {
@@ -27,7 +28,7 @@ class InputList extends React.Component {
 
     render() {
         return (
-            <div class="input-list">
+            <div className="input-list">
                 <form onSubmit={this.handleSubmit}>
                 <input type="text" placeholder="Adicione uma tarefa" onChange={this.handleChange} />
                 <button type="submit">Adicionar</button>

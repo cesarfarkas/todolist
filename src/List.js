@@ -1,12 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
+import axios from 'axios'
 import './estilos/List.css'
 
-function List(){
-    return(
-        <div class="lista-tarefas">
-            <div class="tarefa">Estudar componentes em React</div>
-        </div>
-    )
-}
+export default class List extends React.Component {
 
-export default List
+     state = {listaTarefas:[]};
+
+    componentDidMount() {
+
+        axios.get(`http://127.0.0.1:8000/api/tarefas`)
+            .then(res => {
+                const dados = res.data;
+                this.setState((state) => {
+                    // Importante: use `state` em vez de `this.state` quando estiver atualizando.
+                    return {dados}
+                  });
+            })
+
+    }
+
+    render() {
+        return(
+            <div>
+                { this.state.listaTarefas.map(item => <div className="tarefa">{item.titulo}</div>)}
+            </div>
+        );
+    }
+}

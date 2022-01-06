@@ -5,7 +5,7 @@ import List from './List.js'
 
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <Cabecalho />
       <InputList />
       <List />

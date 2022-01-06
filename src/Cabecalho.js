@@ -3,7 +3,7 @@ import './estilos/cabecalho.css'
 
 function Cabecalho() {
     return (
-      <div class="cabecalho">
+      <div className="cabecalho">
         <h1>Todo List</h1>
         <hr/>
       </div>
