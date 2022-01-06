@@ -20,16 +20,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // List artigos
-Route::get('artigos', [ArtigoController::class, 'index']);
+Route::get('tarefas', [TarefaController::class, 'index']);
 
 // List single artigo
-Route::get('artigo/{id}', [ArtigoController::class, 'show']);
+Route::get('tarefa/{id}', [TarefaController::class, 'show']);
 
-// Create new artigo
-Route::post('artigo', [ArtigoController::class, 'store']);
+// Create new tarefa
+Route::post('tarefa', [TarefaController::class, 'store']);
 
-// Update artigo
-Route::put('artigo/{id}', [ArtigoController::class, 'update']);
+// Update tarefa
+Route::put('tarefa/{id}', [TarefaController::class, 'update']);
 
-// Delete artigo
-Route::delete('artigo/{id}', [ArtigoController::class,'destroy']);
+// Delete tarefa
+Route::delete('tarefa/{id}', [TarefaController::class,'destroy']);
