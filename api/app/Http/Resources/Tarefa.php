@@ -16,8 +16,7 @@ class Tarefa extends JsonResource
     {
         return [
             'id' => $this->id,
-            'titulo' => $this->titulo,
-            'error' => false
+            'titulo' => $this->titulo
         ];
     }
 
